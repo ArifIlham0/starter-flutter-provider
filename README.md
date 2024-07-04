@@ -1,16 +1,12 @@
-# starter_frontend_flutter
-
-A new Flutter project.
+# Starter for Flutter with Provider
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+You can just clone this repo to use it, but if you already make a flutter project and just want to use some of this code, follow this step
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. Download this repo in zip file, and extract it
+2. Copy and paste dependencies and assets in pubspec.yaml
+3. Copy and paste lib and assets folder (replace lib folder)
+4. Go to terminal and run this command flutterfire configure
+5. Uncomment Firebase code in main.dart
+6. You all set!
