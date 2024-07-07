@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:starter_frontend_flutter/constants/app_constants.dart';
 import 'package:starter_frontend_flutter/theme.dart';
-import 'package:starter_frontend_flutter/views/widgets/reusable_text.dart';
-import 'package:starter_frontend_flutter/views/widgets/text_styles.dart';
-import 'package:starter_frontend_flutter/views/widgets/width_spacer.dart';
+import 'package:starter_frontend_flutter/views/widgets/loading_indicator.dart';
 
 class LoadingButton extends StatelessWidget {
-  const LoadingButton({super.key, this.color, this.onTap});
+  const LoadingButton({
+    super.key,
+    this.color,
+    this.onTap,
+    this.isButton,
+  });
 
   final Color? color;
   final void Function()? onTap;
+  final bool? isButton;
 
   @override
   Widget build(BuildContext context) {
@@ -26,21 +29,7 @@ class LoadingButton extends StatelessWidget {
           ),
         ),
       ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          SizedBox(
-            height: 20.h,
-            width: 20.w,
-            child: CircularProgressIndicator(color: kWhite),
-          ),
-          WidthSpacer(width: 10),
-          ReusableText(
-            text: "Loading..",
-            style: textStyles(16, color ?? kWhite, FontWeight.w600),
-          ),
-        ],
-      ),
+      child: LoadingIndicator(isButton: isButton),
     );
   }
 }

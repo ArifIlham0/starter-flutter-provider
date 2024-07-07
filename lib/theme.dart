@@ -22,7 +22,7 @@ class ThemeClass {
   static ThemeData darkmode = ThemeData(
     brightness: Brightness.dark,
     colorScheme: ColorScheme.dark(
-      primary: kDarkPurple,
+      primary: kGreen,
     ),
   );
 }
